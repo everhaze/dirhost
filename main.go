@@ -27,13 +27,13 @@ func main() {
 }
 
 func host(addr string, path string, logpath string) {
-	i, err := os.Stat(path)
+	fi, err := os.Stat(path)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%s does not exist\n", path)
 		os.Exit(1)
 	}
 
-	if !i.IsDir() {
+	if !fi.IsDir() {
 		fmt.Fprintf(os.Stderr, "%s is not a directory\n", path)
 		os.Exit(1)
 	}

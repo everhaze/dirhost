@@ -1,5 +1,5 @@
 # dirhost
-Host a directory of your choice
+A minimal CLI tool to serve any directory over HTTP.
 
 ## Quick start
 ```sh
